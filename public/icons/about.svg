@@ -53,4 +53,7 @@
     <g transform="matrix(1.2,0,0,1.20117,-350,-1.14355e-14)">
         <path d="M1000,249.756L750,0L750,249.756L1000,249.756Z" style="fill:white;"/>
     </g>
+    <g transform="matrix(1,0,0,1,-46.7887,67.3424)">
+        <text x="366.662px" y="851.554px" style="font-family:'AndaleMono', 'Andale Mono', monospace;font-size:200px;">TXT</text>
+    </g>
 </svg>

@@ -1,41 +1,20 @@
 import React, { useState, useEffect, useLayoutEffect } from 'react';
 import FileGrid from './components/FileGrid'
+import FileData from './FileData';
+import DavidContent from './components/DavidContent';
 
 function App() {
     const [time, setTime] = useState(new Date().toLocaleString())
     const [size, setSize] = useState([0, 0]);
 
-    const files = [
-        {
-            name: "david",
-            extension: ".png",
-            open: false,
-            externalLink: "",
-        },
-        {
-            name: "about",
-            extension: ".txt",
-            open: false,
-            externalLink: "",
-        },
-        {
-            name: "resume",
-            extension: ".pdf",
-            open: false,
-            externalLink: "",
-        },
-        {
-            name: "GitHub",
-            extension: "",
-            open: false,
-            externalLink: "https://github.com/dg314",
-        },
-        {
-            name: "LinkedIn",
-            extension: "",
-            open: false,
-            externalLink: "https://linkedin.com/in/dg314",
-        }
+    const fileDataList = [
+        new FileData("dgNet", "", "", null),
+        new FileData("dgMail", "", "mailto:david_grossman@brown.edu", null),
+        new FileData("GitHub", "", "https://github.com/dg314", null),
+        new FileData("LinkedIn", "", "https://linkedin.com/in/dg314", null),
+        new FileData("david", ".png", "", <DavidContent/>),
+        new FileData("about", ".txt", "", null),
+        new FileData("resume", ".pdf", "resume.pdf", null),
     ]
 
     useLayoutEffect(() => {
@@ -58,16 +37,16 @@ function App() {
     
     return (
         <>
-            <div className="absolute w-screen h-screen opacity-20">
-                <img className="object-contain w-full h-full px-16 pb-16 pt-20 select-none" src="/pi_symbol.svg"/>
+            <div className="absolute w-full h-full opacity-20">
+                <img className="object-contain w-full h-full px-16 pb-16 pt-20" draggable="false" src="/pi_symbol.svg"/>
             </div>
-            <div className="font-mono absolute z-10 w-screen h-screen">
-                <div className="flex items-center h-8 bg-black/20 z-50">
-                    <img className="h-4 m-2 text-white select-none" src="/pi_symbol_white.svg"/>
-                    <h1 className="text-center text-white text-sm mx-1 select-none">dgOS v3.14</h1>
-                    <h1 className="text-center text-white text-sm ml-auto mr-2 select-none">{time}</h1>
-                </div>
-                <FileGrid size={size} files={files} />
+            <div className="font-mono absolute flex items-center z-50 w-full h-8 bg-black/20">
+                <img className="h-4 m-2 text-white" draggable="false" src="/pi_symbol_white.svg"/>
+                <h1 className="text-center text-white text-sm mx-1">dgOS v3.14</h1>
+                <h1 className="text-center text-white text-sm ml-auto mr-2">{time}</h1>
+            </div>
+            <div className="font-mono absolute top-8 w-full h-[calc(100%-2rem)]">
+                <FileGrid size={size} fileDataList={fileDataList} />
             </div>
         </>
     );
