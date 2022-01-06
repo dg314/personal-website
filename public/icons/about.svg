@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 1000 1000" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(1,0,0,1,50,0)">
+        <path d="M500,0L799.239,0L100,0L100,1000L800,1000L800,300L500,0Z" style="fill:rgb(231,231,231);"/>
+    </g>
+    <g transform="matrix(1.11992,0,0,2.37387,-51.7889,-966.393)">
+        <clipPath id="_clip1">
+            <path d="M537.35,407.096L804.547,407.096L180.182,407.096L180.182,828.349L805.227,828.349L805.227,533.472L537.35,407.096Z"/>
+        </clipPath>
+        <g clip-path="url(#_clip1)">
+            <g transform="matrix(0.892922,0,0,0.421253,24.0742,247.796)">
+                <text x="224.828px" y="442.742px" style="font-family:'AndaleMono', 'Andale Mono', monospace;font-size:20.833px;">Lorem ipsum dolor sit amet, consectetur</text>
+                <text x="224.828px" y="466.18px" style="font-family:'AndaleMono', 'Andale Mono', monospace;font-size:20.833px;">adipiscing elit, sed do eiusmod tempor</text>
+                <text x="224.828px" y="489.617px" style="font-family:'AndaleMono', 'Andale Mono', monospace;font-size:20.833px;">incididunt ut labore et dolore magna aliqua.</text>
+                <text x="224.828px" y="513.055px" style="font-family:'AndaleMono', 'Andale Mono', monospace;font-size:20.833px;">Eget arcu dictum varius duis at. Tortor at</text>
+                <text x="224.828px" y="536.492px" style="font-family:'AndaleMono', 'Andale Mono', monospace;font-size:20.833px;">auctor urna nunc id cursus metus. Aliquet risus</text>
+                <text x="224.828px" y="559.93px" style="font-family:'AndaleMono', 'Andale Mono', monospace;font-size:20.833px;">feugiat in ante metus dictum. Odio ut enim</text>
+                <text x="224.828px" y="583.367px" style="font-family:'AndaleMono', 'Andale Mono', monospace;font-size:20.833px;">blandit volutpat maecenas volutpat blandit.</text>
+                <text x="224.828px" y="606.805px" style="font-family:'AndaleMono', 'Andale Mono', monospace;font-size:20.833px;">Ullamcorper morbi tincidunt ornare massa.</text>
+                <text x="224.828px" y="630.242px" style="font-family:'AndaleMono', 'Andale Mono', monospace;font-size:20.833px;">Iaculis urna id volutpat lacus laoreet non</text>
+                <text x="224.828px" y="653.68px" style="font-family:'AndaleMono', 'Andale Mono', monospace;font-size:20.833px;">curabitur. A diam sollicitudin tempor id eu.</text>
+                <text x="224.828px" y="677.117px" style="font-family:'AndaleMono', 'Andale Mono', monospace;font-size:20.833px;">Volutpat est velit egestas dui id ornare arcu</text>
+                <text x="224.828px" y="700.555px" style="font-family:'AndaleMono', 'Andale Mono', monospace;font-size:20.833px;">odio. Nibh tellus molestie nunc non blandit</text>
+                <text x="224.828px" y="723.992px" style="font-family:'AndaleMono', 'Andale Mono', monospace;font-size:20.833px;">massa enim nec.</text>
+                <text x="224.828px" y="772.43px" style="font-family:'AndaleMono', 'Andale Mono', monospace;font-size:20.833px;">Elementum pulvinar etiam non quam lacus</text>
+                <text x="224.828px" y="795.867px" style="font-family:'AndaleMono', 'Andale Mono', monospace;font-size:20.833px;">suspendisse faucibus interdum. Integer feugiat</text>
+                <text x="224.828px" y="819.305px" style="font-family:'AndaleMono', 'Andale Mono', monospace;font-size:20.833px;">scelerisque varius morbi. Faucibus ornare</text>
+                <text x="224.828px" y="842.742px" style="font-family:'AndaleMono', 'Andale Mono', monospace;font-size:20.833px;">suspendisse sed nisi lacus sed viverra tellus</text>
+                <text x="224.828px" y="866.18px" style="font-family:'AndaleMono', 'Andale Mono', monospace;font-size:20.833px;">in. Nibh mauris cursus mattis molestie a</text>
+                <text x="224.828px" y="889.617px" style="font-family:'AndaleMono', 'Andale Mono', monospace;font-size:20.833px;">iaculis at erat. Est ante in nibh mauris cursus</text>
+                <text x="224.828px" y="913.055px" style="font-family:'AndaleMono', 'Andale Mono', monospace;font-size:20.833px;">mattis molestie a iaculis. Augue mauris augue</text>
+                <text x="224.828px" y="936.492px" style="font-family:'AndaleMono', 'Andale Mono', monospace;font-size:20.833px;">neque gravida in fermentum et sollicitudin.</text>
+                <text x="224.828px" y="959.93px" style="font-family:'AndaleMono', 'Andale Mono', monospace;font-size:20.833px;">Commodo odio aenean sed adipiscing diam donec</text>
+                <text x="224.828px" y="983.367px" style="font-family:'AndaleMono', 'Andale Mono', monospace;font-size:20.833px;">adipiscing tristique risus. Rhoncus urna neque</text>
+                <text x="224.828px" y="1006.81px" style="font-family:'AndaleMono', 'Andale Mono', monospace;font-size:20.833px;">viverra justo nec ultrices dui sapien eget. A</text>
+                <text x="224.828px" y="1030.24px" style="font-family:'AndaleMono', 'Andale Mono', monospace;font-size:20.833px;">iaculis at erat pellentesque adipiscing.</text>
+                <text x="224.828px" y="1053.68px" style="font-family:'AndaleMono', 'Andale Mono', monospace;font-size:20.833px;">Feugiat sed lectus vestibulum mattis</text>
+                <text x="224.828px" y="1077.12px" style="font-family:'AndaleMono', 'Andale Mono', monospace;font-size:20.833px;">ullamcorper. Mattis pellentesque id nibh</text>
+                <text x="224.828px" y="1100.56px" style="font-family:'AndaleMono', 'Andale Mono', monospace;font-size:20.833px;">tortor. Nisl nunc mi ipsum faucibus vitae</text>
+                <text x="224.828px" y="1123.99px" style="font-family:'AndaleMono', 'Andale Mono', monospace;font-size:20.833px;">aliquet nec ullamcorper sit. Tristique</text>
+                <text x="224.828px" y="1147.43px" style="font-family:'AndaleMono', 'Andale Mono', monospace;font-size:20.833px;">sollicitudin nibh sit amet commodo. Enim ut sem</text>
+                <text x="224.828px" y="1170.87px" style="font-family:'AndaleMono', 'Andale Mono', monospace;font-size:20.833px;">viverra aliquet eget. In arcu cursus euismod</text>
+                <text x="224.828px" y="1194.31px" style="font-family:'AndaleMono', 'Andale Mono', monospace;font-size:20.833px;">quis viverra. Odio ut enim blandit volutpat</text>
+                <text x="224.828px" y="1217.74px" style="font-family:'AndaleMono', 'Andale Mono', monospace;font-size:20.833px;">maecenas volutpat blandit aliquam etiam. Amet</text>
+                <text x="224.828px" y="1241.18px" style="font-family:'AndaleMono', 'Andale Mono', monospace;font-size:20.833px;">porttitor eget dolor morbi non arcu. Elementum</text>
+                <text x="224.828px" y="1264.62px" style="font-family:'AndaleMono', 'Andale Mono', monospace;font-size:20.833px;">nisi quis eleifend quam adipiscing. Sagittis id</text>
+                <text x="224.828px" y="1288.06px" style="font-family:'AndaleMono', 'Andale Mono', monospace;font-size:20.833px;">consectetur purus ut. Pellentesque elit eget</text>
+                <text x="224.828px" y="1311.49px" style="font-family:'AndaleMono', 'Andale Mono', monospace;font-size:20.833px;">gravida cum sociis.</text>
+            </g>
+        </g>
+    </g>
+    <g transform="matrix(1.2,0,0,1.20117,-350,-1.14355e-14)">
+        <path d="M1000,249.756L750,0L750,249.756L1000,249.756Z" style="fill:white;"/>
+    </g>
+</svg>
