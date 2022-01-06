@@ -8,31 +8,35 @@ function Window({ fileData, fileClose, size }) {
     const [x, setX] = useState(size[0] * 0.3);
     const [y, setY] = useState(size[1] * 0.3);
 
+    console.log("EY")
+
     const changePosition = (newWidth, newHeight, newX, newY) => {
-        console.log("HELLO!")
-        if (newWidth < 100 || newHeight < 100) {
-            return
-        }
-
-        if (size[0] > 0 && size[1] > 0) {
-            newX = Math.max(Math.min(size[0] - 8 - newWidth, newX), -8)
-            newY = Math.max(Math.min(size[1] - 40 - newHeight, newY), -8)
-            newWidth = Math.min(newWidth, size[0])
-            newHeight = Math.min(newHeight, size[1] - 32)
-        }
-
-        //setX(newX)
-        //setY(newY)
-        //setWidth(newWidth)
-        //setHeight(newHeight)
+        setX(newX)
+        setY(newY)
+        setWidth(newWidth)
+        setHeight(newHeight)
     }
 
     useEffect(() => {
-        changePosition(width, height, x, y)
+        console.log(width)
+
+        const newX = Math.max(Math.min(size[0] - width - 8, x), -8)
+        const newY = Math.max(Math.min(size[1] - height - 40, y), -8)
+        const newWidth = Math.min(width, size[0])
+        const newHeight = Math.min(height, size[1] - 32)
+
+        changePosition(newWidth, newHeight, newX, newY)
     }, [size])
 
     return (
-        <Rnd size={{ width: width, height: height }} position={{ x: x, y: y }} onDragStop={(e, d) => changePosition(width, height, d.x - 16, d.y - 16) } onResizeStop={(e, direction, ref, delta, position) => changePosition(ref.style.width, ref.style.height, position.x, position.y) }
+        <Rnd 
+            size={{ width: width, height: height }}
+            position={{ x: x, y: y }}
+            onDragStop={(e, d) => changePosition(width, height, d.x, d.y) }
+            onResizeStop={(e, direction, ref, delta, position) => changePosition(parseInt(ref.style.width.slice(0, -2)), parseInt(ref.style.height.slice(0, -2)), position.x, position.y) }
+            bounds="#drag-bounds"
+            minWidth={200}
+            minHeight={200}
         >
             <div className="bg-white rounded-xl w-full h-full">
                 <div className="flex items-center w-full h-7 bg-neutral-300 rounded-t-xl">
@@ -44,7 +48,7 @@ function Window({ fileData, fileClose, size }) {
                         <AiOutlineClose className="mx-auto" />
                     </button>
                 </div>
-                <div className="w-full h-[calc(100%-1.75rem)]">
+                <div className="w-full h-[calc(100%-1.75rem)] p-2">
                     {fileData.windowContent}
                 </div>
             </div>
