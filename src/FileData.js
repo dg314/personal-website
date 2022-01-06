@@ -27,6 +27,15 @@ class FileData {
     getFullName() {
         return `${this.name}${this.extension}`
     }
+
+    getIconPath() {
+        if (this.extension == ".txt") {
+            return "icons/txt.svg"
+        }
+        else {
+            return `icons/${this.name}.svg`
+        }
+    }
 }
 
 export default FileData

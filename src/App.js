@@ -13,8 +13,9 @@ function App() {
         new FileData("GitHub", "", "https://github.com/dg314", null),
         new FileData("LinkedIn", "", "https://linkedin.com/in/dg314", null),
         new FileData("david", ".png", "", <DavidContent/>),
-        new FileData("about", ".txt", "", null),
         new FileData("resume", ".pdf", "resume.pdf", null),
+        new FileData("about", ".txt", "", null),
+        new FileData("README", ".txt", "", null),
     ]
 
     useLayoutEffect(() => {

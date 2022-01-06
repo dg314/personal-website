@@ -17,7 +17,7 @@ function File({ fileData, size }) {
     return (
         <>
             <button onClick={fileOpen} className="w-20 h-20 m-2 border-2 border-transparent hover:bg-white/5 hover:border-white/20">
-                <img className="w-12 h-12 mb-1 block mx-auto" draggable="false" src={`icons/${fileData.name}.svg`}/>
+                <img className="w-12 h-12 mb-1 block mx-auto" draggable="false" src={fileData.getIconPath()}/>
                 <p className="text-white text-xs text-center">
                     {fileData.getFullName()}
                 </p>
