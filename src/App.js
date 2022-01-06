@@ -1,21 +1,22 @@
 import React, { useState, useEffect, useLayoutEffect } from 'react';
 import FileGrid from './components/FileGrid'
 import FileData from './FileData';
-import DavidContent from './components/DavidContent';
+import David from './content/David';
+import About from './content/About';
 
 function App() {
     const [time, setTime] = useState(new Date().toLocaleString())
     const [size, setSize] = useState([0, 0]);
 
     const fileDataList = [
-        new FileData("dgNet", "", "", null),
-        new FileData("dgMail", "", "mailto:david_grossman@brown.edu", null),
-        new FileData("GitHub", "", "https://github.com/dg314", null),
-        new FileData("LinkedIn", "", "https://linkedin.com/in/dg314", null),
-        new FileData("david", ".png", "", <DavidContent/>),
-        new FileData("resume", ".pdf", "resume.pdf", null),
-        new FileData("about", ".txt", "", null),
-        new FileData("README", ".txt", "", null),
+        new FileData("dgNet", "", "", null, null),
+        new FileData("dgMail", "", "mailto:david_grossman@brown.edu", null, null),
+        new FileData("GitHub", "", "https://github.com/dg314", null, null),
+        new FileData("LinkedIn", "", "https://linkedin.com/in/dg314", null, null),
+        new FileData("david", ".png", "", <David/>, {width: 0.3, height: 0.3, x: 0.35, y: 0.05}),
+        new FileData("resume", ".pdf", "resume.pdf", null, null),
+        new FileData("about", ".txt", "", <About/>, {width: 0.4, height: 0.55, x: 0.3, y: 0.4}),
+        new FileData("README", ".txt", "", null, null),
     ]
 
     useLayoutEffect(() => {

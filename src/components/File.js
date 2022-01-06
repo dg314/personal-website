@@ -5,7 +5,7 @@ function File({ fileData, size }) {
     const [showWindow, setShowWindow] = useState(fileData.isWindowShown())
 
     const fileOpen = () => {
-        fileData.openFile()
+        fileData.openFile({width: 0.3, height: 0.4, x: 0.35, y: 0.3})
         setShowWindow(fileData.isWindowShown())
     }
 
@@ -22,7 +22,7 @@ function File({ fileData, size }) {
                     {fileData.getFullName()}
                 </p>
             </button>
-            {showWindow ?
+            {showWindow && size[0] > 0 && size[1] > 0 ?
                 <Window fileData={fileData} fileClose={fileClose} size={size} />
             : null}
         </>
