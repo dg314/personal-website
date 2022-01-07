@@ -3,20 +3,22 @@ import FileGrid from './components/FileGrid'
 import FileData from './FileData';
 import David from './content/David';
 import About from './content/About';
+import ReadMe from './content/ReadMe';
+import Projects from './content/Projects';
 
 function App() {
     const [time, setTime] = useState(new Date().toLocaleString())
     const [size, setSize] = useState([0, 0]);
 
     const fileDataList = [
-        new FileData("dgNet", "", "", null, null),
+        new FileData("Projects", "", null, <Projects/>, null),
         new FileData("dgMail", "", "mailto:david_grossman@brown.edu", null, null),
         new FileData("GitHub", "", "https://github.com/dg314", null, null),
         new FileData("LinkedIn", "", "https://linkedin.com/in/dg314", null, null),
-        new FileData("david", ".png", "", <David/>, {width: 0.3, height: 0.3, x: 0.35, y: 0.05}),
+        new FileData("david", ".png", null, <David/>, {width: 0.3, height: 0.3, x: 0.35, y: 0.05}),
         new FileData("resume", ".pdf", "resume.pdf", null, null),
-        new FileData("about", ".txt", "", <About/>, {width: 0.4, height: 0.55, x: 0.3, y: 0.4}),
-        new FileData("README", ".txt", "", null, null),
+        new FileData("about", ".txt", null, <About/>, {width: 0.5, height: 0.55, x: 0.25, y: 0.4}),
+        new FileData("README", ".txt", null, <ReadMe/>, null),
     ]
 
     useLayoutEffect(() => {
@@ -47,8 +49,10 @@ function App() {
                 <h1 className="text-center text-white text-sm mx-1">dgOS v3.14</h1>
                 <h1 className="text-center text-white text-sm ml-auto mr-2">{time}</h1>
             </div>
-            <div id="drag-bounds" className="font-mono absolute top-8 w-full h-[calc(100%-2rem)]">
-                <FileGrid size={size} fileDataList={fileDataList} />
+            <div className="font-mono absolute top-8 w-full h-[calc(100%-2rem)] p-1">
+                <div className="w-full h-full" id="drag-bounds">
+                    <FileGrid size={size} fileDataList={fileDataList} />
+                </div>
             </div>
         </>
     );

@@ -1,29 +1,40 @@
 import React, { useState, useEffect } from 'react';
 import Window from './Window';
 
-function File({ fileData, size }) {
-    const [showWindow, setShowWindow] = useState(fileData.isWindowShown())
+function File({ fileData, size, topFile, setTopFile }) {
+    const [showWindow, setShowWindow] = useState(fileData.open)
 
     const fileOpen = () => {
-        fileData.openFile({width: 0.3, height: 0.4, x: 0.35, y: 0.3})
-        setShowWindow(fileData.isWindowShown())
+        fileData.openFile({width: 0.4, height: 0.4, x: 0.3, y: 0.3})
+        setShowWindow(fileData.open)
+        becomeTopFile()
     }
 
     const fileClose = () => {
         fileData.closeFile()
-        setShowWindow(fileData.isWindowShown())
+        setShowWindow(fileData.open)
+    }
+
+    const becomeTopFile = () => {
+        setTopFile(fileData.name)
+    }
+
+    const isTopFile = () => {
+        return topFile === fileData.name
     }
 
     return (
         <>
-            <button onClick={fileOpen} className="w-20 h-20 m-2 border-2 border-transparent hover:bg-white/5 hover:border-white/20">
-                <img className="w-12 h-12 mb-1 block mx-auto" draggable="false" src={fileData.getIconPath()}/>
-                <p className="text-white text-xs text-center">
-                    {fileData.getFullName()}
-                </p>
-            </button>
+            <a href={fileData.externalLink} target="_blank" onClick={fileOpen} className="flex items-center w-20 h-20 m-2 border-2 border-transparent hover:bg-white/5 hover:border-white/20 hover:cursor-pointer">
+                <div className="mx-auto">
+                    <img className="w-12 h-12 mb-1 block mx-auto" draggable="false" src={fileData.getIconPath()}/>
+                    <p className="text-white text-xs text-center">
+                        {fileData.getFullName()}
+                    </p>
+                </div>
+            </a>
             {showWindow && size[0] > 0 && size[1] > 0 ?
-                <Window fileData={fileData} fileClose={fileClose} size={size} />
+                <Window fileData={fileData} fileClose={fileClose} size={size} becomeTopFile={becomeTopFile} isTopFile={isTopFile} />
             : null}
         </>
     );

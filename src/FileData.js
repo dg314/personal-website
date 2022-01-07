@@ -1,27 +1,31 @@
 class FileData {
     constructor(name, extension, externalLink, windowContent, initPosition) {
-        this.name = name
-        this.extension = extension
-        this.externalLink = externalLink
-        this.windowContent = windowContent
-        this.initPosition = initPosition // null iff window is not open, {width: number, height: number, x: number, y: number}
+        this.name = name // string
+        this.extension = extension // string
+        this.externalLink = externalLink // string
+        this.windowContent = windowContent // JSX
+        this.initPosition = initPosition // null iff window is not open; { width: number, height: number, x: number, y: number }
+        this.open = !!this.initPosition && !!this.windowContent // boolean
+
+        if (this.initPosition === null) {
+            this.initPosition = {
+                width: 0.4,
+                height: 0.4,
+                x: 0.3,
+                y: 0.3
+            }
+        }
     }
 
     openFile(initPosition) {
-        if (this.externalLink) {
-            window.open(this.externalLink, "_blank")
-        }
-        else {
+        if (this.windowContent !== null) {
             this.initPosition = initPosition
+            this.open = true
         }
     }
 
     closeFile() {
-        this.initPosition = null
-    }
-
-    isWindowShown() {
-        return !!this.initPosition && !!this.windowContent
+        this.open = false
     }
 
     getFullName() {
@@ -29,7 +33,7 @@ class FileData {
     }
 
     getIconPath() {
-        if (this.extension == ".txt") {
+        if (this.extension === ".txt") {
             return "icons/txt.svg"
         }
         else {
@@ -40,8 +44,8 @@ class FileData {
     getPixelInitPosition(size) {
         const width = size[0] * this.initPosition.width
         const height = (size[1] - 32) * this.initPosition.height
-        const adjustedWidth = Math.max(width, 200)
-        const adjustedHeight = Math.max(height, 200)
+        const adjustedWidth = Math.max(width, 250)
+        const adjustedHeight = Math.max(height, 250)
 
         return {
             width: adjustedWidth,

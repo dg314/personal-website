@@ -2,10 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { AiOutlineClose } from 'react-icons/ai';
 import { Rnd } from 'react-rnd';
 
-function Window({ fileData, fileClose, size }) {
+function Window({ fileData, fileClose, size, becomeTopFile, isTopFile }) {
     const pixelInitPosition = fileData.getPixelInitPosition(size)
-
-    console.log(pixelInitPosition)
 
     const [width, setWidth] = useState(pixelInitPosition.width);
     const [height, setHeight] = useState(pixelInitPosition.height);
@@ -20,13 +18,26 @@ function Window({ fileData, fileClose, size }) {
     }
 
     useEffect(() => {
-        const newX = Math.max(Math.min(size[0] - width - 8, x), -8)
-        const newY = Math.max(Math.min(size[1] - height - 40, y), -8)
-        const newWidth = Math.min(width, size[0])
-        const newHeight = Math.min(height, size[1] - 32)
+        const newX = Math.max(Math.min(size[0] - width - 8, x), 0)
+        const newY = Math.max(Math.min(size[1] - height - 40, y), 0)
+        const newWidth = Math.min(width, size[0] - 8)
+        const newHeight = Math.min(height, size[1] - 40)
 
         setPosition(newWidth, newHeight, newX, newY)
+        // eslint-disable-next-line
     }, [size])
+
+    const rndStyle = {
+        zIndex: isTopFile() ? 30 : 20,
+    }
+
+    const windowStyle = {
+        borderColor: isTopFile() ? "#CDCDCD" : "#BCBCBC"
+    }
+
+    const topBarStyle = {
+        backgroundColor: isTopFile() ? "#CDCDCD" : "#BCBCBC"
+    }
 
     return (
         <Rnd 
@@ -35,18 +46,21 @@ function Window({ fileData, fileClose, size }) {
             onDragStop={(e, d) => setPosition(width, height, d.x, d.y) }
             onResizeStop={(e, direction, ref, delta, position) => setPosition(parseInt(ref.style.width.slice(0, -2)), parseInt(ref.style.height.slice(0, -2)), position.x, position.y) }
             bounds="#drag-bounds"
-            minWidth={200}
-            minHeight={200}
+            minWidth={250}
+            minHeight={250}
             dragHandleClassName="drag-bar"
+            style={rndStyle}
+            onDragStart={becomeTopFile}
+            onMouseDown={becomeTopFile}
         >
-            <div className="bg-white rounded-xl w-full h-full">
-                <div className="flex items-center w-full h-7 bg-neutral-300 rounded-t-xl drag-bar cursor-move">
+            <div className="rounded-xl w-full h-full border-2 bg-white" style={windowStyle}>
+                <div className="flex items-center w-full h-7 drag-bar rounded-t-md cursor-move" style={topBarStyle}>
                     <div className="w-7 h-7"/>
                     <p className="text-sm mx-auto">
                         {fileData.getFullName()}
                     </p>
-                    <button onClick={fileClose} className="w-3 h-3 m-2 bg-red-600 rounded-full text-transparent hover:text-black/75 text-[0.65rem] p-0">
-                        <AiOutlineClose className="mx-auto" />
+                    <button onClick={fileClose} className="flex items-center w-3 h-3 m-2 bg-red-600 rounded-full p-[0.375rem] hover:p-0">
+                        <img className="w-2/3 h-2/3 mx-auto opacity-60 select-none" src="x.svg"/>
                     </button>
                 </div>
                 <div className="w-full h-[calc(100%-1.75rem)] p-2">
