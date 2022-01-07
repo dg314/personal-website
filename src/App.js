@@ -10,18 +10,7 @@ import Loader from 'react-loader-spinner';
 function App() {
     const [time, setTime] = useState(new Date().toLocaleString())
     const [size, setSize] = useState([0, 0])
-    const [showFiles, setShowFiles] = useState(false)
-
-    const fileDataList = [
-        new FileData("Projects", "", null, <Projects/>, null),
-        new FileData("dgMail", "", "mailto:david_grossman@brown.edu", null, null),
-        new FileData("GitHub", "", "https://github.com/dg314", null, null),
-        new FileData("LinkedIn", "", "https://linkedin.com/in/dg314", null, null),
-        new FileData("david", ".png", null, <David/>, {width: 0.3, height: 0.3, x: 0.35, y: 0.05}),
-        new FileData("resume", ".pdf", "resume.pdf", null, null),
-        new FileData("about", ".txt", null, <About/>, {width: 0.5, height: 0.55, x: 0.25, y: 0.4}),
-        new FileData("README", ".txt", null, <ReadMe/>, null),
-    ]
+    const [fileDataList, setFileDataList] = useState(null)
 
     useLayoutEffect(() => {
         function updateSize() {
@@ -39,7 +28,37 @@ function App() {
         }, 1000)
 
         const dispTimer = setTimeout(() => {
-            setShowFiles(true)
+            let aboutHeight = 0.55
+            let aboutY = 0.4
+
+            if (window.innerHeight < 500) {
+                aboutY = 0.65
+                aboutHeight = 0.35
+            }
+            else if (window.innerHeight < 560) {
+                aboutY = 0.55
+                aboutHeight = 0.45
+            }
+            else if (window.innerHeight < 600) {
+                aboutY = 0.5
+                aboutHeight = 0.5
+            }
+            else if (window.innerHeight < 700) {
+                aboutY = 0.45
+            }
+
+            setFileDataList(
+                [
+                    new FileData("Projects", "", null, <Projects/>, null),
+                    new FileData("dgMail", "", "mailto:david_grossman@brown.edu", null, null),
+                    new FileData("GitHub", "", "https://github.com/dg314", null, null),
+                    new FileData("LinkedIn", "", "https://linkedin.com/in/dg314", null, null),
+                    new FileData("david", ".png", null, <David/>, {width: 0.3, height: 0.3, x: 0.35, y: 0.05}),
+                    new FileData("resume", ".pdf", "resume.pdf", null, null),
+                    new FileData("about", ".txt", null, <About/>, {width: 0.5, height: aboutHeight, x: 0.25, y: aboutY}),
+                    new FileData("README", ".txt", null, <ReadMe/>, null),
+                ]
+            )
         }, 1000)
 
         return () => {
@@ -60,7 +79,7 @@ function App() {
             </div>
             <div className="font-mono absolute top-8 w-full h-[calc(100%-2rem)] p-1">
                 <div className="w-full h-full" id="drag-bounds">
-                    {showFiles ? <FileGrid size={size} fileDataList={fileDataList} /> : 
+                    {fileDataList ? <FileGrid size={size} fileDataList={fileDataList} /> : 
                     <div className="w-full h-full flex items-center">
                         <Loader className="mx-auto" type="TailSpin" color="#FFFFFF" height={100} width={100} />
                     </div>}
