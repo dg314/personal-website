@@ -41,7 +41,7 @@ function Projects() {
                         return (
                             <div key={projectData.name} className="mx-auto w-[200px] p-2 h-fit bg-neutral-200 rounded-lg">
                                 <div className="flex items-center w-full h-fit mt-2 mb-3">
-                                    <img className="ml-auto mr-3 h-5" src={projectData.getIconPath()}/>
+                                    <img className="ml-auto mr-3 h-5" src={projectData.getIconPath()} alt="Project Icon"/>
                                     <h1 className="mr-auto text-base leading-5 text-center inline-block w-min">
                                         {projectData.name}
                                     </h1>
@@ -52,7 +52,7 @@ function Projects() {
                                 <div className="flex flex-wrap items-center justify-center gap-1 mb-3">
                                     {projectData.technologies.map(technology => {
                                         return (
-                                            <a key={technology.name} className="inline-block bg-neutral-300 text-[0.675rem] rounded-full whitespace-nowrap p-[3px] border-[1px] border-transparent hover:border-neutral-700" href={technology.link} target="_blank">
+                                            <a key={technology.name} className="inline-block bg-neutral-300 text-[0.675rem] rounded-full whitespace-nowrap p-[3px] border-[1px] border-transparent hover:border-neutral-700" href={technology.link} target="_blank" rel="noreferrer">
                                                 {technology.name}
                                             </a>
                                         )
@@ -60,7 +60,7 @@ function Projects() {
                                 </div>
                                 <p className="text-center text-sm">
                                     {projectData.date}
-                                    {projectData.externalLink ? <><span>{" | "}</span><a className="text-blue-900" href={projectData.externalLink} target="_blank">{projectData.externalLinkName}</a></> : null}
+                                    {projectData.externalLink ? <><span>{" | "}</span><a className="text-blue-900" href={projectData.externalLink} target="_blank" rel="noreferrer">{projectData.externalLinkName}</a></> : null}
                                 </p>
                             </div>
                         )

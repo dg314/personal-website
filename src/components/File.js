@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Window from './Window';
 
 function File({ fileData, size, topFile, setTopFile }) {
@@ -25,9 +25,9 @@ function File({ fileData, size, topFile, setTopFile }) {
 
     return (
         <>
-            <a href={fileData.externalLink} target="_blank" onClick={fileOpen} className="flex items-center w-20 h-20 m-2 border-2 border-transparent hover:bg-white/5 hover:border-white/20 hover:cursor-pointer">
+            <a href={fileData.externalLink} target="_blank" rel="noreferrer" onClick={fileOpen} className="flex items-center w-20 h-20 m-2 border-2 border-transparent hover:bg-white/5 hover:border-white/20 hover:cursor-pointer">
                 <div className="mx-auto">
-                    <img className="w-12 h-12 mb-1 block mx-auto" draggable="false" src={fileData.getIconPath()}/>
+                    <img className="w-12 h-12 mb-1 block mx-auto" draggable="false" src={fileData.getIconPath()} alt="File Icon"/>
                     <p className="text-white text-xs text-center">
                         {fileData.getFullName()}
                     </p>

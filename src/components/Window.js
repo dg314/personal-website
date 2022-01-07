@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { AiOutlineClose } from 'react-icons/ai';
 import { Rnd } from 'react-rnd';
 
 function Window({ fileData, fileClose, size, becomeTopFile, isTopFile }) {
@@ -60,7 +59,7 @@ function Window({ fileData, fileClose, size, becomeTopFile, isTopFile }) {
                         {fileData.getFullName()}
                     </p>
                     <button onClick={fileClose} className="flex items-center w-3 h-3 m-2 bg-red-600 rounded-full p-[0.375rem] hover:p-0">
-                        <img className="w-2/3 h-2/3 mx-auto opacity-60 select-none" src="x.svg"/>
+                        <img className="w-2/3 h-2/3 mx-auto opacity-60 select-none" draggable="false" src="x.svg" alt="X"/>
                     </button>
                 </div>
                 <div className="w-full h-[calc(100%-1.75rem)] p-2">
