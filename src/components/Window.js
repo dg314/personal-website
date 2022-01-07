@@ -58,8 +58,8 @@ function Window({ fileData, fileClose, size, becomeTopFile, isTopFile }) {
                     <p className="text-sm mx-auto">
                         {fileData.getFullName()}
                     </p>
-                    <button onClick={fileClose} className="flex items-center w-10 h-5 md:w-3 md:h-3 m-2 bg-red-600 rounded-tr-md md:rounded-full px-5 py-[0.625rem] md:p-[0.375rem] hover:p-0">
-                        <img className="w-3 h-3 md:w-2 md:h-2 mx-auto opacity-60 select-none" draggable="false" src="x.svg" alt="X"/>
+                    <button onClick={fileClose} onTouchEnd={fileClose} className="flex items-center w-3 h-3 m-2 bg-red-600 rounded-full p-[0.375rem] hover:p-0">
+                        <img className="w-2/3 h-2/3 mx-auto opacity-60 select-none" draggable="false" src="x.svg" alt="X"/>
                     </button>
                 </div>
                 <div className="w-full h-[calc(100%-1.75rem)] p-2">
