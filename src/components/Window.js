@@ -44,7 +44,6 @@ function Window({ fileData, fileClose, size, becomeTopFile, isTopFile }) {
         <Rnd 
             size={{ width: width, height: height }}
             position={{ x: x, y: y }}
-            onDragStop={(e, d) => setPosition(width, height, d.x, d.y) }
             onResizeStop={(e, direction, ref, delta, position) => setPosition(parseInt(ref.style.width.slice(0, -2)), parseInt(ref.style.height.slice(0, -2)), position.x, position.y) }
             bounds="#drag-bounds"
             minWidth={250}
