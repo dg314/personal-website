@@ -47,6 +47,7 @@ function Window({ fileData, fileClose, size, becomeTopFile, isTopFile }) {
             bounds="#drag-bounds"
             minWidth={250}
             minHeight={250}
+            dragHandleClassName="drag-bar"
             style={rndStyle}
             onDragStart={becomeTopFile}
             onMouseDown={becomeTopFile}
