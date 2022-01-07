@@ -5,6 +5,7 @@ import David from './content/David';
 import About from './content/About';
 import ReadMe from './content/ReadMe';
 import Projects from './content/Projects';
+import Loader from 'react-loader-spinner';
 
 function App() {
     const [time, setTime] = useState(new Date().toLocaleString())
@@ -59,7 +60,10 @@ function App() {
             </div>
             <div className="font-mono absolute top-8 w-full h-[calc(100%-2rem)] p-1">
                 <div className="w-full h-full" id="drag-bounds">
-                    {showFiles ? <FileGrid size={size} fileDataList={fileDataList} /> : null}
+                    {showFiles ? <FileGrid size={size} fileDataList={fileDataList} /> : 
+                    <div className="w-full h-full flex items-center">
+                        <Loader className="mx-auto" type="TailSpin" color="#FFFFFF" height={100} width={100} />
+                    </div>}
                 </div>
             </div>
         </>
