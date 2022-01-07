@@ -4,6 +4,8 @@ import { Rnd } from 'react-rnd';
 function Window({ fileData, fileClose, size, becomeTopFile, isTopFile }) {
     const pixelInitPosition = fileData.getPixelInitPosition(size)
 
+    console.log(pixelInitPosition)
+
     const [width, setWidth] = useState(pixelInitPosition.width);
     const [height, setHeight] = useState(pixelInitPosition.height);
     const [x, setX] = useState(pixelInitPosition.x);
@@ -44,6 +46,7 @@ function Window({ fileData, fileClose, size, becomeTopFile, isTopFile }) {
             position={{ x: x, y: y }}
             onDragStop={(e, d) => setPosition(width, height, d.x, d.y) }
             onResizeStop={(e, direction, ref, delta, position) => setPosition(parseInt(ref.style.width.slice(0, -2)), parseInt(ref.style.height.slice(0, -2)), position.x, position.y) }
+            bounds="#drag-bounds"
             minWidth={250}
             minHeight={250}
             dragHandleClassName="drag-bar"
