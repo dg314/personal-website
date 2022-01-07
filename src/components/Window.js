@@ -54,13 +54,13 @@ function Window({ fileData, fileClose, size, becomeTopFile, isTopFile }) {
         >
             <div className="rounded-xl w-full h-full border-2 bg-white" style={windowStyle}>
                 <div className="flex items-center w-full h-7 drag-bar rounded-t-md cursor-move" style={topBarStyle}>
-                    <div className="w-7 h-7"/>
+                    <button onClick={fileClose} onTouchEnd={fileClose} className="flex items-center w-5 h-5 md:w-3 md:h-3 m-1 md:m-2 bg-red-600 rounded-full p-[0.675rem] md:p-[0.375rem] hover:p-0">
+                        <img className="w-2/3 h-2/3 mx-auto opacity-60 select-none" draggable="false" src="x.svg" alt="X"/>
+                    </button>
                     <p className="text-sm mx-auto">
                         {fileData.getFullName()}
                     </p>
-                    <button onClick={fileClose} onTouchEnd={fileClose} className="flex items-center w-3 h-3 m-2 bg-red-600 rounded-full p-[0.375rem] hover:p-0">
-                        <img className="w-2/3 h-2/3 mx-auto opacity-60 select-none" draggable="false" src="x.svg" alt="X"/>
-                    </button>
+                    <div className="w-7 h-7"/>
                 </div>
                 <div className="w-full h-[calc(100%-1.75rem)] p-2">
                     {fileData.windowContent}
