@@ -14,7 +14,7 @@ function About() {
                 </p>
 
                 <p className="text-sm text-black mb-4">
-                    As a researcher under the direction of <a className="text-blue-900" href="https://en.wikipedia.org/wiki/Andries_van_Dam" target="_blank" rel="noreferrer">Professor Andy van Dam</a>, I work with the MERN stack to develop an integrated environment for document-based knowledge work (<a className="text-blue-900" href="https://cs.brown.edu/research/ptc/#/project/dash" target="_blank" rel="noreferrer">Dash project</a>).
+                    As a researcher under the direction of <a className="text-blue-900" href="https://en.wikipedia.org/wiki/Andries_van_Dam" target="_blank" rel="noreferrer">Professor Andy van Dam</a>, I develop an integrated environment for document-based knowledge work (<a className="text-blue-900" href="https://cs.brown.edu/research/ptc/#/project/dash" target="_blank" rel="noreferrer">Dash project</a>) using the MERN stack.
                     I also serve as the Vice President of Brown's <a className="text-blue-900" href="https://www.theaires.org/about" target="_blank" rel="noreferrer">AI Robotics Ethics Society</a>, which is an organization that aims to educate future AI leaders on how to create AI ethically and responsibly.
                 </p>
 
