@@ -9,7 +9,7 @@ class ProjectData {
     }
 
     getIconPath() {
-        return `projects/${this.name.replaceAll(" ", "_").replaceAll("\u00A0", "_")}.svg`
+        return `projects/${this.name.replaceAll(" ", "_").replaceAll("\u00A0", "_").toLowerCase()}.svg`
     }
 }
 

@@ -37,7 +37,7 @@ class FileData {
             return "icons/txt.svg"
         }
         else {
-            return `icons/${this.name}.svg`
+            return `icons/${this.name.toLowerCase()}.svg`
         }
     }
 
