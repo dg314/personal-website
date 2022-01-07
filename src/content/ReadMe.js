@@ -17,7 +17,8 @@ function ReadMe() {
                 </p>
 
                 <p className="text-sm text-black mb-4">
-                    I developed the responsive UI for this website with React.js and Tailwind CSS. Each window on the desktop uses the react-rnd package to handle dragging and resizing.
+                    I developed the responsive UI for this website with React.js and Tailwind CSS.
+                    Each window on the desktop uses the react-rnd package to handle dragging and resizing.
                 </p>
 
                 <p className="text-sm text-black mb-4">
