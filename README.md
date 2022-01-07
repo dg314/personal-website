@@ -1,70 +1,11 @@
-# David's Personal Website
+# Personal Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+As a computer scientist, I figured that a desktop would be the perfect medium for me to present myself to the world. (dg314.com)
 
-## Available Scripts
+## Technologies Used
 
-In the project directory, you can run:
+I developed the responsive UI for this website with React.js and Tailwind CSS. Each window on the desktop uses the react-rnd package to handle dragging and resizing.
 
-### `npm start`
+## Project Structure
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+The App component renders the top bar, the Pi wallpaper, and a FileGrid component. The React setInterval hook is used to update the time in the top right corner every second. The FileGrid component takes in a list of FileData objects, each of which corresponds to one of the files shown on the desktop. For each file, the corresponding instance of the FileData class contains information such as its name and the link that opens when the user clicks on it. To display the files on the desktop, the FileGrid component renders a File component for each element in the list of FileData objects with Tailwind CSS's grid-flow-col class. The File component renders its file icon as well as its corresponding Window component if it is currently open. This is an easy way of ensuring that a file cannot have multiple windows open at once, which greatly simplifies the logic. The Window component uses the Rnd component from the react-rnd package to handle dragging and resizing. Additionally, the Window component renders the unique window content of each openable file (Projects, david.png, about.txt, README.txt), which is stored as an instance variable in its FileData object.

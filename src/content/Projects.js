@@ -29,7 +29,7 @@ function Projects() {
         new ProjectData("Dash", "Ongoing", [react, mongo], "Web app that provides an integrated environment for document-based knowledge work", "https://browndash.com/", "Website"),
         new ProjectData("Personal Website", "Jan 2022", [react, tail], "Responsive website that displays my portfolio in a browser with files and windows", "https://github.com/dg314/personal-website", "GitHub"),
         new ProjectData("Crypto\u00A0Price Predictor", "Dec 2021", [pyth, tens, nltk, tweep], "Deep learning model that uses sentiment analysis and price history to predict crypto prices", "https://devpost.com/software/crypto-price-predictor", "Devpost"),
-        new ProjectData("Hacker\u00A0Escape", "Dec 2020", [unity, csh], "Mobile puzzle game with 50+ levels to teach kids the basics of computer science", null, null),
+        new ProjectData("Hacker\u00A0Escape", "Dec 2020", [unity, csh], "Mobile puzzle game with 50+ levels that teach the fundamentals of computer science", null, null),
         new ProjectData("My\u00A0Match\u00A0Data", "Oct 2019", [swift, realm], "iOS app for recording and analyzing tennis match statistics in customizable categories", "https://github.com/dg314/my-match-data", "GitHub"),
     ]
 
