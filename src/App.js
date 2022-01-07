@@ -8,7 +8,8 @@ import Projects from './content/Projects';
 
 function App() {
     const [time, setTime] = useState(new Date().toLocaleString())
-    const [size, setSize] = useState([0, 0]);
+    const [size, setSize] = useState([0, 0])
+    const [showFiles, setShowFiles] = useState(false)
 
     const fileDataList = [
         new FileData("Projects", "", null, <Projects/>, null),
@@ -33,10 +34,17 @@ function App() {
 
     useEffect(() => {
         const interval = setInterval(() => {
-            setTime(new Date().toLocaleString());
-        }, 1000);
+            setTime(new Date().toLocaleString())
+        }, 1000)
 
-        return () => clearInterval(interval);
+        const dispTimer = setTimeout(() => {
+            setShowFiles(true)
+        }, 1000)
+
+        return () => {
+            clearInterval(interval)
+            clearTimeout(dispTimer)
+        }
     }, []);
     
     return (
@@ -51,7 +59,7 @@ function App() {
             </div>
             <div className="font-mono absolute top-8 w-full h-[calc(100%-2rem)] p-1">
                 <div className="w-full h-full" id="drag-bounds">
-                    <FileGrid size={size} fileDataList={fileDataList} />
+                    {showFiles ? <FileGrid size={size} fileDataList={fileDataList} /> : null}
                 </div>
             </div>
         </>
