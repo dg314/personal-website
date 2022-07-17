@@ -21,7 +21,7 @@ function About() {
                 </p>
 
                 <p className="text-sm text-black mb-4">
-                    I grew to love programming because of how it allows me to express my creativity to the world. If you want to learn more about the various passion projects that I've built over the years, open the Projects folder in the top left corner. My most significant project so far is a Web3 app called SocialHelix, as it led to a patent-pending blockchain protocol for distributed order matching engines in a decentralized exchange.
+                    I grew to love programming because of how it allows me to express my creativity to the world. If you want to learn more about the various passion projects that I've built over the years, open the Projects folder in the top left corner. My most significant project so far is a Web3 app called SocialHelix, as it led to a <a className="text-blue-900" href="https://dg314.com/whitepaper.pdf" target="_blank" rel="noreferrer">patent-pending blockchain protocol</a> for distributed order matching engines in a decentralized exchange.
                 </p>
 
                 <p className="text-sm text-black mb-4">
