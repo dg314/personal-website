@@ -9,17 +9,15 @@ function About() {
                 </p>
 
                 <p className="text-sm text-black mb-4">
-                    I'm a sophomore at Brown University concentrating in <a className="text-blue-900" href="https://bulletin.brown.edu/the-college/concentrations/apmc/" target="_blank" rel="noreferrer">Applied Math-Computer Science</a>.
-                    My favorite areas of CS are web development and deep learning, and I've recently become interested in building decentralized applications on the Ethereum blockchain.
+                    I'm a rising junior at Brown University concentrating in <a className="text-blue-900" href="https://bulletin.brown.edu/the-college/concentrations/apmc/" target="_blank" rel="noreferrer">Applied Math-Computer Science</a> on the AI/ML pathway. I currently work as a Software Engineering Intern at a San Francisco-based startup called Kapwing, where I'm developing an AI video editing toolkit (scene cut detection, content-aware video resizing, background blur, etc.) with React-Redux, Flask, Expess, MongoDB, FFmpeg, and the MediaPipe C++ API.
                 </p>
 
                 <p className="text-sm text-black mb-4">
-                    As a researcher under the direction of <a className="text-blue-900" href="https://en.wikipedia.org/wiki/Andries_van_Dam" target="_blank" rel="noreferrer">Professor Andy van Dam</a>, I develop an integrated environment for document-based knowledge work (<a className="text-blue-900" href="https://cs.brown.edu/research/ptc/#/project/dash" target="_blank" rel="noreferrer">Dash project</a>) using the MERN stack.
-                    I also serve as the Vice President of Brown's <a className="text-blue-900" href="https://www.theaires.org/about" target="_blank" rel="noreferrer">AI Robotics Ethics Society</a>, which is an organization that aims to educate future AI leaders on how to create AI ethically and responsibly.
+                    As a <a className="text-blue-900" href="https://brown-deep-learning.github.io/dl-website-2022" target="_blank" rel="noreferrer">Deep Learning</a> TA and the Vice President of the <a className="text-blue-900" href="https://www.theaires.org/about" target="_blank" rel="noreferrer">AI Robotics Ethics Society</a> @ Brown, I've become passionate about both the ethical and technical aspects of artificial intelligence. This past year, I also worked under <a className="text-blue-900" href="https://en.wikipedia.org/wiki/Andries_van_Dam" target="_blank" rel="noreferrer">Professor Andy van Dam</a> to develop a MERN-stack web app for hypermedia organization (<a className="text-blue-900" href="https://cs.brown.edu/research/ptc/#/project/dash" target="_blank" rel="noreferrer">Dash project</a>).
                 </p>
 
                 <p className="text-sm text-black mb-4">
-                    I primarily work in JavaScript (React.js, Node.js), HTML, CSS (Tailwind CSS), Python (TensorFlow, NumPy), and Java. Additionally, I have experience in Swift (iOS development), C, C# (Unity scripting), MATLAB, Go, and x86 assembly.
+                    I primarily code in JavaScript (Node.js, React, Next.js, Express), HTML, CSS (Tailwind CSS), Python (TensorFlow, Flask, NumPy), and Java. Additionally, I have experience in Swift (iOS development), C, C# (Unity scripting), C++, MATLAB, Go, and x86 assembly.
                 </p>
 
                 <p className="text-sm text-black mb-4">
