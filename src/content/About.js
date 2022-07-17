@@ -17,11 +17,11 @@ function About() {
                 </p>
 
                 <p className="text-sm text-black mb-4">
-                    I primarily code in JavaScript (Node.js, React, Next.js, Express), HTML, CSS (Tailwind CSS), Python (TensorFlow, Flask, NumPy), and Java. Additionally, I have experience in Swift (iOS development), C, C# (Unity scripting), C++, MATLAB, Go, and x86 assembly.
+                    I primarily code in JavaScript (Node.js, React, Next.js, Express), HTML, CSS (Tailwind CSS), Python (TensorFlow, Flask, NumPy, Pandas), and Java. Additionally, I have experience in Swift (iOS development), SQL, C, C# (Unity scripting), C++, MATLAB, Go, and x86 assembly.
                 </p>
 
                 <p className="text-sm text-black mb-4">
-                    I grew to love programming because of how it allows me to express my creativity to the world. If you want to learn more about the various passion projects that I've built over the years, open the Projects folder in the top left corner.
+                    I grew to love programming because of how it allows me to express my creativity to the world. If you want to learn more about the various passion projects that I've built over the years, open the Projects folder in the top left corner. My most significant project was a Web3 app called SocialHelix, as it led to a patent-pending blockchain protocol for distributed order matching engines in a decentralized exchange.
                 </p>
 
                 <p className="text-sm text-black mb-4">

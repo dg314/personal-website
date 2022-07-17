@@ -7,8 +7,9 @@ function Projects() {
         gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))"
     }
 
-    const avax = new Technology("Avalanche", "https://docs.avax.network/")
-    const react = new Technology("React.js", "https://reactjs.org/")
+    const react = new Technology("React", "https://reactjs.org/")
+    const rnatv = new Technology("React Native", "https://reactnative.dev/")
+    const exprs = new Technology("Express", "https://expressjs.com/")
     const ether = new Technology("Ethereum", "https://ethereum.org/en/developers/docs/")
     const solid = new Technology("Solidity", "https://soliditylang.org/")
     const alch = new Technology("Alchemy", "https://docs.alchemy.com/alchemy/")
@@ -16,19 +17,26 @@ function Projects() {
     const swift = new Technology("Swift", "https://developer.apple.com/swift/")
     const realm = new Technology("Realm", "https://realm.io/")
     const pyth = new Technology("Python", "https://www.python.org/")
+    const flask = new Technology("Flask", "https://flask.palletsprojects.com/")
+    const numpy = new Technology("NumPy", "https://numpy.org/")
+    const panda = new Technology("Pandas", "https://pandas.pydata.org/")
     const tens = new Technology("TensorFlow", "https://www.tensorflow.org/")
     const nltk = new Technology("NLTK", "https://www.nltk.org/")
     const tweep = new Technology("Tweepy", "https://www.tweepy.org/")
     const mongo = new Technology("MongoDB", "https://www.mongodb.com/")
     const unity = new Technology("Unity", "https://unity.com/")
     const csh = new Technology("C#", "https://docs.microsoft.com/en-us/dotnet/csharp/")
+    const frbse = new Technology("Firebase", "https://firebase.google.com/")
+    const mysql = new Technology("MySQL", "https://www.mysql.com/")
+
 
     const projectDataList = [
-        new ProjectData("Social\u00A0Helix", "Coming soon...", [avax, react], "Web app that allows social media users to invest in AVAX tokens of their favorite creators", null, null),
-        new ProjectData("Ether\u00A0Museum", "Coming soon...", [ether, solid, alch, react, tail], "Ethereum-powered decentralized platform that allows artists to share their work with the world", null, null),
-        new ProjectData("Dash", "Ongoing", [react, mongo], "Web app that provides an integrated environment for document-based knowledge work", "https://browndash.com/", "Website"),
+        new ProjectData("SocialHelix", "Jun 2022", [ether, solid, rnatv, exprs, frbse, mongo, mysql], "Mobile app for minting, promoting, and trading ERC-1155 crypto tokens in USD liquidity pools", "https://dg314.com/whitepaper.pdf", "Whitepaper"),
+        new ProjectData("Messenger Wrapped", "May 2022", [pyth, flask, numpy, panda, react, mongo], "Web app that performs sentiment analysis on Messenger chat history and generates infographics to summarize the results", null, null),
+        new ProjectData("Ether\u00A0Museum", "Jan 2022", [ether, solid, alch, react, tail], "Ethereum-powered decentralized platform that allows artists to share their work with the world", null, null),
         new ProjectData("Personal Website", "Jan 2022", [react, tail], "Responsive website that displays my portfolio in a browser with files and windows", "https://github.com/dg314/personal-website", "GitHub"),
         new ProjectData("Crypto\u00A0Price Predictor", "Dec 2021", [pyth, tens, nltk, tweep], "Deep learning model that uses sentiment analysis and price history to predict crypto prices", "https://devpost.com/software/crypto-price-predictor", "Devpost"),
+        new ProjectData("Dash", "May 2021", [react, exprs, mongo], "Web app that provides an integrated environment for document-based knowledge work", "https://browndash.com/", "Website"),
         new ProjectData("Hacker\u00A0Escape", "Dec 2020", [unity, csh], "Mobile puzzle game with 50+ levels that teach the fundamentals of computer science", null, null),
         new ProjectData("My\u00A0Match\u00A0Data", "Oct 2019", [swift, realm], "iOS app for recording and analyzing tennis match statistics in customizable categories", "https://github.com/dg314/my-match-data", "GitHub"),
     ]
