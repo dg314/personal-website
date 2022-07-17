@@ -9,7 +9,7 @@ function About() {
                 </p>
 
                 <p className="text-sm text-black mb-4">
-                    I'm a rising junior at Brown University concentrating in <a className="text-blue-900" href="https://bulletin.brown.edu/the-college/concentrations/apmc/" target="_blank" rel="noreferrer">Applied Math-Computer Science</a> on the AI/ML pathway. I currently work as a Software Engineering Intern at a San Francisco-based startup called Kapwing, where I'm developing an AI video editing toolkit (scene cut detection, content-aware video resizing, background blur, etc.) with React-Redux, Flask, Expess, MongoDB, FFmpeg, and the MediaPipe C++ API.
+                    I'm a rising junior at Brown University concentrating in <a className="text-blue-900" href="https://bulletin.brown.edu/the-college/concentrations/apmc/" target="_blank" rel="noreferrer">Applied Math-Computer Science</a> with the AI/ML pathway. I currently work as a Software Engineering Intern at a San Francisco-based startup called Kapwing, where I'm developing an AI video editing toolkit (scene cut detection, content-aware video resizing, background blur, etc.) with React-Redux, Flask, Expess, MongoDB, FFmpeg, and the MediaPipe C++ API.
                 </p>
 
                 <p className="text-sm text-black mb-4">
@@ -21,7 +21,7 @@ function About() {
                 </p>
 
                 <p className="text-sm text-black mb-4">
-                    I grew to love programming because of how it allows me to express my creativity to the world. If you want to learn more about the various passion projects that I've built over the years, open the Projects folder in the top left corner. My most significant project was a Web3 app called SocialHelix, as it led to a patent-pending blockchain protocol for distributed order matching engines in a decentralized exchange.
+                    I grew to love programming because of how it allows me to express my creativity to the world. If you want to learn more about the various passion projects that I've built over the years, open the Projects folder in the top left corner. My most significant project so far is a Web3 app called SocialHelix, as it led to a patent-pending blockchain protocol for distributed order matching engines in a decentralized exchange.
                 </p>
 
                 <p className="text-sm text-black mb-4">
