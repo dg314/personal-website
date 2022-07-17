@@ -33,11 +33,11 @@ function Projects() {
     const projectDataList = [
         new ProjectData("SocialHelix", "Jun 2022", [ether, solid, rnatv, exprs, frbse, mongo, mysql], "Mobile app for minting, promoting, and trading ERC-1155 crypto tokens in USD liquidity pools", "https://dg314.com/whitepaper.pdf", "Whitepaper"),
         new ProjectData("Messenger Wrapped", "May 2022", [pyth, flask, numpy, panda, react, mongo], "Web app that performs sentiment analysis on Messenger chat history and generates infographics to summarize the results", null, null),
-        new ProjectData("Ether\u00A0Museum", "Jan 2022", [ether, solid, alch, react, tail], "Ethereum-powered decentralized platform that allows artists to share their work with the world", null, null),
         new ProjectData("Personal Website", "Jan 2022", [react, tail], "Responsive website that displays my portfolio in a browser with files and windows", "https://github.com/dg314/personal-website", "GitHub"),
+        new ProjectData("Ether\u00A0Museum", "Jan 2022", [ether, solid, alch, react, tail], "Ethereum-powered decentralized platform that allows artists to share their work with the world", null, null),
         new ProjectData("Crypto\u00A0Price Predictor", "Dec 2021", [pyth, tens, nltk, tweep], "Deep learning model that uses sentiment analysis and price history to predict crypto prices", "https://devpost.com/software/crypto-price-predictor", "Devpost"),
         new ProjectData("Dash", "May 2021", [react, exprs, mongo], "Web app that provides an integrated environment for document-based knowledge work", "https://browndash.com/", "Website"),
-        new ProjectData("Hacker\u00A0Escape", "Dec 2020", [unity, csh], "Mobile puzzle game with 50+ levels that teach the fundamentals of computer science", null, null),
+        new ProjectData("Hacker\u00A0Escape", "Dec 2020", [unity, csh], "Mobile puzzle game with 50+ levels that teach the fundamentals of computer science", "https://www.youtube.com/shorts/QZZ6O01F6S0", "Demo"),
         new ProjectData("My\u00A0Match\u00A0Data", "Oct 2019", [swift, realm], "iOS app for recording and analyzing tennis match statistics in customizable categories", "https://github.com/dg314/my-match-data", "GitHub"),
     ]
 
