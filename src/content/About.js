@@ -9,7 +9,7 @@ function About() {
                 </p>
 
                 <p className="text-sm text-black mb-4">
-                    I'm a rising junior at Brown University concentrating in <a className="text-blue-900" href="https://bulletin.brown.edu/the-college/concentrations/apmc/" target="_blank" rel="noreferrer">Applied Math-Computer Science</a> with the AI/ML pathway. I currently work as a Software Engineering Intern at a San Francisco-based startup called Kapwing, where I'm developing an AI video editing toolkit (scene cut detection, content-aware video resizing, background blur, etc.) with React-Redux, Flask, Expess, MongoDB, FFmpeg, and the MediaPipe C++ API.
+                    I'm a rising junior at Brown University concentrating in <a className="text-blue-900" href="https://bulletin.brown.edu/the-college/concentrations/apmc/" target="_blank" rel="noreferrer">Applied Math-Computer Science</a> with the AI/ML pathway. I currently work as a Software Engineering Intern at a San Francisco-based startup called <a className="text-blue-900" href="https://www.kapwing.com/" target="_blank" rel="noreferrer">Kapwing</a>, where I'm developing an AI video editing toolkit (scene cut detection, content-aware video resizing, background blur, etc.) with React-Redux, Flask, Expess, MongoDB, FFmpeg, and the MediaPipe C++ API.
                 </p>
 
                 <p className="text-sm text-black mb-4">
